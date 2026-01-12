@@ -6,13 +6,4 @@ def oneStepEquation(constant):
     while True:
         if x + constant == 10:
             return x
-        else:
-            user_input = int(input("enter again"))
-            if user_input > 10:
-                print(user_input,"try a number lesser than 10")
-            else:
-                print(user_input, "try number greater than 0")
-
-        return 0
-
-print(oneStepEquation(5))
+print(oneStepEquation(5)) 
