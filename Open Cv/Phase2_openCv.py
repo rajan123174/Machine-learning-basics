@@ -23,7 +23,7 @@ import cv2
 
 image2 = cv2.imread("Open Cv/rajanFilter.jpeg",-1)
 
-'''if image2 is None:
+if image2 is None:
     print('image is not found')
 else:
     print('image loaded successfully')
@@ -34,7 +34,7 @@ else:
 #always save resized image 
     cv2.imwrite("resized_output.webp",resize,[cv2.IMWRITE_WEBP_QUALITY,90])
     cv2.waitKey(0)
-    cv2.destroyAllWindows'''
+    cv2.destroyAllWindows
 
 #2. Cropping an image using slicing in OpenCV
 '''
@@ -46,12 +46,12 @@ X-axis:-> columns = left to right
 Syntax:->
 image[startY:endY,startX:endX]
 '''
-'''if image2 is not None:
+if image2 is not None:
     cropped = image2[100:200,50:150]
     cv2.imshow("originalImage",image2)
     cv2.imshow('croppedImage',cropped)
     cv2.waitKey(0)
-    cv2.destroyAllWindows()'''
+    cv2.destroyAllWindows()
 
 #3. Image Rotation and flipping
 '''
@@ -80,7 +80,7 @@ m :-> matrix instruction for rotation
 (width,height)-> new width and height of output image
 '''
 
-'''if image2 is None:
+if image2 is None:
     print("image could not load")
 else:
     (h,w) = image2.shape[:2]
@@ -91,7 +91,7 @@ else:
     cv2.imshow('originalIamge',image2)
     cv2.imshow("rotatedImage",rotated)
     cv2.waitKey(0)
-    cv2.destroyAllWindows'''
+    cv2.destroyAllWindows
 
 
 '''
@@ -103,7 +103,7 @@ flipcode:->
 -1:-> flip both horizontally and vertically
 '''
 
-'''if image2 is None:
+if image2 is None:
     print("image is not found")
 else:
     flippedH = cv2.flip(image2,1)
@@ -115,7 +115,7 @@ else:
     cv2.imshow('VerticalFlip',flippedV)
     cv2.imshow('Flipped both(h,v)',flippedboth)
     cv2.waitKey(0)
-    cv2.destroyAllWindows()'''
+    cv2.destroyAllWindows()
 
 #4. Drawing shapes(line,circlesand rectangle)
 
@@ -129,8 +129,8 @@ color:-> color of line
 thickness:-> thickness of that line
 '''
 
-'''
-LINE:->
+
+#LINE:->
 if image2 is None:
     print('image is not found')
 
@@ -144,7 +144,7 @@ else:
     cv2.line(image2,pt1,pt2,color,thickness)
     cv2.imshow('Line drawn',image2)
     cv2.waitKey(0)
-    cv2.destroyAllWindows()'''
+    cv2.destroyAllWindows()
 
 """
 RECTANGLE:-> these rectangles are used to detect faces and objects in images
@@ -153,7 +153,7 @@ pt1:-> top left corner of rectangle(x1,y1)
 pt2:-> bottom right corner of rectangle(x2,y2)
 """
 
-'''if image2 is None:
+if image2 is None:
     print('image not found')
 else:
     print('image is loaded')
@@ -166,7 +166,7 @@ else:
     cv2.rectangle(image2,pt1,pt2,color,thickness)
     cv2.imshow('Rectangle Drawn',image2)
     cv2.waitKey(0)
-    cv2.destroyAllWindows()'''
+    cv2.destroyAllWindows()
 
 
 '''
@@ -176,7 +176,7 @@ center:-> (x,y)
 radius:-> in pixels 
 '''
 
-'''if image2 is None:
+if image2 is None:
     print('image is not found')
 else:
     print('image found')
@@ -184,7 +184,7 @@ else:
 
     cv2.imshow('Circle in imge',image2)
     cv2.waitKey(0)
-    cv2.destroyAllWindows()'''
+    cv2.destroyAllWindows()
 
 #5. Adding text in the image
 '''
@@ -203,6 +203,8 @@ else:
     cv2.imshow('Text on the image',image2)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
+
+
 
 
 
